@@ -128,6 +128,7 @@
   </div>
 </div>
 
+<script src="/links.js"></script>
 <script>
 (function() {
   var defaultOF = "https://onlyfans.com/aleksavicee";
@@ -135,7 +136,12 @@
   window.addEventListener('DOMContentLoaded', function() {
     var utm = getParam('utm_source');
     var btn = document.querySelector('.btn-onlyfans');
-    if (btn && utm) btn.href = defaultOF;
+    if (!btn) return;
+    if (typeof ofLinks !== 'undefined') {
+      btn.href = (utm && ofLinks[utm]) ? ofLinks[utm] : (ofLinks['default'] || defaultOF);
+    } else {
+      btn.href = defaultOF;
+    }
   });
 })();
 </script>
