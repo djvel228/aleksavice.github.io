@@ -1,8 +1,8 @@
 var ofLinks = {
-  "instagram_kawaii": "https://onlyfans.com/aleksavicee/c59",
-  "instagram_aleksa": "https://onlyfans.com/aleksavicee/c61",
-  "twitter": "https://onlyfans.com/aleksavicee/c60",
-  "reddit": "https://onlyfans.com/aleksavicee/c57",
+  "instagram_kawaii": "https://onlyfans.com/aleksavicee/c65",
+  "instagram_aleksa": "https://onlyfans.com/aleksavicee/c67",
+  "twitter": "https://onlyfans.com/aleksavicee/c66",
+  "reddit": "https://onlyfans.com/aleksavicee/c63",
   "default": "https://onlyfans.com/aleksavicee"
 };
 
