@@ -60,7 +60,11 @@
   .name { font-family: 'Lora', serif; font-style: italic; font-weight: 700; font-size: 40px; color: #3a1a2a; text-align: center; line-height: 1.15; margin-bottom: 6px; }
   .name span { color: #ff80aa; }
   .subtitle { font-size: 13px; font-weight: 300; color: rgba(58,26,42,0.5); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
-  .divider { width: 40px; height: 1px; background: linear-gradient(90deg, transparent, #ff80aa, transparent); margin-bottom: 28px; }
+  .divider { width: 40px; height: 1px; background: linear-gradient(90deg, transparent, #ff80aa, transparent); margin-bottom: 20px; }
+  .follow-block { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 28px; }
+  .follow-text { font-family: 'Lora', serif; font-style: italic; font-size: 22px; color: #ff80aa; letter-spacing: 0.05em; }
+  .follow-arrow { animation: bounceDown 1.2s ease-in-out infinite; }
+  @keyframes bounceDown { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
   .stats { display: flex; gap: 32px; margin-bottom: 32px; }
   .stat { text-align: center; }
   .stat-num { font-family: 'Lora', serif; font-style: italic; font-size: 22px; font-weight: 700; color: #ff80aa; }
@@ -115,17 +119,20 @@
       <h1 class="name">Aleksa <span>Vice</span></h1>
       <p class="subtitle">Model &amp; Creator</p>
       <div class="divider"></div>
-      <div class="stats">
-        <div class="stat"><div class="stat-num">18+</div><div class="stat-label">Exclusive</div></div>
-        <div class="stat"><div class="stat-num">Daily</div><div class="stat-label">Updates</div></div>
-        <div class="stat"><div class="stat-num">DM</div><div class="stat-label">Open</div></div>
+      <div class="follow-block">
+        <span class="follow-text">Follow me</span>
+        <div class="follow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff80aa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+          </svg>
+        </div>
       </div>
 
       <!-- Secret Room — ведёт на отдельную страницу, нет OF/Fansly ссылок в HTML -->
       <a class="btn-main btn-secret"
          href="/secret.html"
          onclick="if(window.ym) ym(108973430,'reachGoal','secret_click')">
-        🔒 Secret Room
+        Secret Room
       </a>
 
       <!-- Telegram — ссылка безопасная -->
@@ -147,7 +154,7 @@
       </a>
 
       <span class="privacy-link" onclick="document.getElementById('privacyModal').classList.add('active')">
-        Политика конфиденциальности
+        Privacy Policy
       </span>
     </div>
   </div>
@@ -157,12 +164,12 @@
 <div class="modal-overlay" id="privacyModal">
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('privacyModal').classList.remove('active')">×</button>
-    <h2>Политика конфиденциальности</h2>
-    <p>Настоящий сайт не собирает и не хранит персональные данные пользователей без их явного согласия.</p>
-    <p>Мы используем аналитические инструменты (Яндекс Метрика) для анализа посещаемости сайта в агрегированном и анонимном виде.</p>
-    <p>Переходя по ссылкам на сторонние платформы, вы соглашаетесь с их условиями использования и политиками конфиденциальности.</p>
-    <p>Весь контент на связанных платформах предназначен исключительно для лиц, достигших 18 лет.</p>
-    <p>По вопросам: обратитесь через Telegram или Twitter.</p>
+    <h2>Privacy Policy</h2>
+    <p>This website does not collect or store any personal data without your explicit consent.</p>
+    <p>We use analytics tools to analyze website traffic in an aggregated and anonymous manner.</p>
+    <p>By following links to third-party platforms, you agree to their terms of service and privacy policies.</p>
+    <p>All content on linked platforms is intended exclusively for individuals aged 18 and over.</p>
+    <p>For any inquiries, please reach out via Telegram or Twitter.</p>
   </div>
 </div>
 
