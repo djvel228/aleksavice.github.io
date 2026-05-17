@@ -130,6 +130,7 @@
 
       <!-- Secret Room — ведёт на отдельную страницу, нет OF/Fansly ссылок в HTML -->
       <a class="btn-main btn-secret"
+         id="btn-secret"
          href="/secret.html"
          onclick="if(window.ym) ym(108973430,'reachGoal','secret_click')">
         Secret Room
@@ -176,11 +177,23 @@
 <script src="/links.js"></script>
 <script>
 (function() {
-  // Загружаем ссылки для Telegram и Twitter из links.js
   var defaultTg = "https://t.me/+-ZQrm7cIqpowMWZi";
   var defaultTw = "https://x.com/";
 
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
   window.addEventListener('DOMContentLoaded', function() {
+    var utm = getParam('utm_source');
+
+    // Передаём UTM на страницу Secret Room
+    var secretBtn = document.getElementById('btn-secret');
+    if (secretBtn && utm) {
+      secretBtn.href = '/secret.html?utm_source=' + utm;
+    }
+
+    // Telegram и Twitter из links.js
     var tgBtn = document.getElementById('btn-telegram');
     var twBtn = document.getElementById('btn-twitter');
     if (typeof ofLinks !== 'undefined') {
